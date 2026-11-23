@@ -8,7 +8,6 @@ public class Ventana {
     private JPanel panel1;
     private JTabbedPane tabbedPane1;
 
-    // Componentes de Registro
     private JTextField txtCodigo;
     private JTextField txtTitulo;
     private JTextField txtDirector;
@@ -18,7 +17,7 @@ public class Ventana {
     private JList listaPeliculas;
     private JLabel lblCantidad;
 
-    // Componentes de Busqueda
+
     private JTextField txtBuscarTexto;
     private JButton btnBuscarTexto;
     private JTextArea txtResultados;
@@ -33,7 +32,7 @@ public class Ventana {
     private JButton btnBorrar;
     private JButton btnMeGusta;
 
-    // Componentes de Ranking
+
     private JList listaRanking;
 
     private SistemaPeliculas sistema;
@@ -58,7 +57,7 @@ public class Ventana {
         actualizarLista();
         actualizarRanking();
 
-        // Boton Registrar
+
         btnRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,7 +95,7 @@ public class Ventana {
             }
         });
 
-        // Boton Buscar Texto
+
         btnBuscarTexto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -125,7 +124,7 @@ public class Ventana {
             }
         });
 
-        // Boton Buscar Codigo
+
         btnBuscarCodigo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -166,7 +165,7 @@ public class Ventana {
             }
         });
 
-        // Boton Actualizar
+
         btnActualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -216,7 +215,7 @@ public class Ventana {
             }
         });
 
-        // Boton Borrar
+
         btnBorrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -261,7 +260,7 @@ public class Ventana {
             }
         });
 
-        // Boton Me gusta
+
         btnMeGusta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -299,7 +298,7 @@ public class Ventana {
         });
     }
 
-    // Actualizar listado de la primera pestana
+
     private void actualizarLista() {
 
         modeloPeliculas.clear();
@@ -316,7 +315,7 @@ public class Ventana {
                 + sistema.cantidadPeliculas());
     }
 
-    // Actualizar ranking de popularidad
+
     private void actualizarRanking() {
 
         modeloRanking.clear();
@@ -334,7 +333,7 @@ public class Ventana {
         }
     }
 
-    // Mostrar resultados de la busqueda lineal
+
     private void actualizarResultados() {
 
         txtResultados.setText("");
@@ -358,7 +357,6 @@ public class Ventana {
         }
     }
 
-    // Mostrar pelicula encontrada por codigo
     private void mostrarPelicula() {
 
         int indice = sistema.busquedaBinaria(codigoSeleccionado);
@@ -376,7 +374,7 @@ public class Ventana {
         }
     }
 
-    // Limpiar formulario de registro
+
     private void limpiarRegistro() {
 
         txtCodigo.setText("");
@@ -386,7 +384,6 @@ public class Ventana {
         cmbGenero.setSelectedIndex(0);
     }
 
-    // Limpiar pelicula seleccionada
     private void limpiarSeleccion() {
 
         codigoSeleccionado = -1;
@@ -399,7 +396,7 @@ public class Ventana {
         lblMeGusta.setText("Me gusta: 0");
     }
 
-    // Ejecutar programa
+
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("CineLikes");
